@@ -10,7 +10,7 @@ id dado para cada obj
     color: aqua;
 }
 
-bootstrap 
+bootstrap  ...{Materialize}
 Container{ container-fluid & container} 
 -c.fluid ocupa toda lagura da pagina 
 -c.  ocupa a parte mais interior da pagina
@@ -25,3 +25,4 @@ col - coluna, .....
 margin - m
 pad - p
 metodos css class = "col  mt,mb,mr,ml,p,pl,pr,pt,pb,p "
+
