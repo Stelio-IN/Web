@@ -1,0 +1,27 @@
+. - referente a classes 
+uma classe pode ser para varios elementos 
+.texto{
+    color: blue;
+}
+
+# - referente a id
+id dado para cada obj
+#titulo{
+    color: aqua;
+}
+
+bootstrap 
+Container{ container-fluid & container} 
+-c.fluid ocupa toda lagura da pagina 
+-c.  ocupa a parte mais interior da pagina
+*row- linha, dentro de uma linha podem ter 12 colunas mx
+col - coluna, .....
+<div  class="container-fluid">
+    <div class="row">
+       <div class="col">
+       </div>
+    </div>
+</div> 
+margin - m
+pad - p
+metodos css class = "col  mt,mb,mr,ml,p,pl,pr,pt,pb,p "

@@ -1,0 +1,13 @@
+.div-principal{
+    width: 100%;
+    display:inline-block;
+    border: 1px solid black;
+}
+.div-esquerda{
+    float: left;
+    background: red;
+}
+.div-direita{
+    float: right;
+    background: aqua;
+}
