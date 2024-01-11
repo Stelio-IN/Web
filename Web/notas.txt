@@ -26,3 +26,6 @@ margin - m
 pad - p
 metodos css class = "col  mt,mb,mr,ml,p,pl,pr,pt,pb,p "
 
+
+!important, para ao aceitar sobrepor. overwrite
+
