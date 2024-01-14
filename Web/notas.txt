@@ -28,4 +28,5 @@ metodos css class = "col  mt,mb,mr,ml,p,pl,pr,pt,pb,p "
 
 
 !important, para ao aceitar sobrepor. overwrite
+jquery, framework like bootstrap but para JS
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.compat.css">
+</head>
+<body>
+    <h1 id="titulo1">Titulo 1</h1>
+    <h1 id="titulo2">Titulo 2</h1>
+    <h1 id="titulo3">Titulo 3</h1>
+
+    <button onclick="ver()">ver</button>
+    <button onclick="esconder()">Esconder</button>
+
+    <script>
+
+        /*
+        function ver(){
+            document.getElementById('titulo3').style.display = 'block'
+            document.getElementById('titulo1').style.display = 'block'
+            document.getElementById('titulo2').style.display = 'block'
+        }
+        function esconder(){
+            document.getElementById('titulo3').style.display = 'none'
+            document.getElementById('titulo1').style.display = 'none'
+            document.getElementById('titulo2').style.display = 'none'
+        }
+
+        */
+
+       // Uso do JQuery
+       function ver(){
+        $("#titulo1").show();
+        $("#titulo2").show();
+        $("#titulo3").show();
+       }
+      
+       function esconder(){
+        $("#titulo1").hide();
+        $("#titulo2").hide();
+        $("#titulo3").hide();
+       }
+    </script>
+     <script src="https://kit.fontawesome.com/18e4eef65a.js" crossorigin="anonymous"></script>
+     <script src="assets/js/jquery-3.7.1.min.js"></script>
+     <script src="assets/js/popper.min.js"></script>
+     <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

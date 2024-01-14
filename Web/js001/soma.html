@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="val1">+
+    <input type="number" id="val2"> <button onclick="somar()"> = </button>
+    <p id="resposta">gfdfg</p>
+    <script>
+         
+       function somar()
+       {
+       var n1 = Number(window.document.getElementById('val1').value)
+       var n2= Number(window.document.getElementById('val2').value)
+       document.getElementById('resposta').innerText = n1+n2
+       }
+    
+        
+    </script>
+</body>
+</html>

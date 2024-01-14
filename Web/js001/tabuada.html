@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tabuada v0.1</h2>
+    Type Value<input type="number" id="valor">
+    <button onclick="Calcular()">Calcular Tabuada</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+        function Calcular(){
+
+        let valor = Number(document.getElementById('valor').value)
+        if(valor!=0){
+            var res =    document.getElementById('resultado')
+         res.innerText=``
+            for(var i=1 ;i<=12;i++){
+                res.innerText += `${i} x ${valor} = ${i*valor} \n`
+            }
+        }else{
+            alert('Digite um valor valido')
+        }   
+       
+
+            /*
+                var texto = ''
+                for(var i=1,i<=12;i++){
+                    texto = texto +i.toString() +
+                            ' x ' + valor.toString() +
+                            ' = ' + (i*valor).toString() +
+                            '<br>';
+                }
+                res.innerHTML = texto
+            */
+            
+        }
+    </script>
+</body>
+</html>
