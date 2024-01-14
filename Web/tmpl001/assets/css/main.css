@@ -7,12 +7,16 @@ body{
     color: rgb(99, 97, 97);
 }
 .link-nav:hover{
-    color: rgba(199, 202, 21, 0.781);
+    color: rgb(243, 164, 18);
 }
 .link-categories{
     text-decoration: none;
     color: rgb(99, 97, 97);
 }
 .link-categories:hover{
-    color: rgba(199, 202, 21, 0.781);
+    color: rgb(243, 164, 18);
+}
+.link-more{
+    text-decoration: none;
+    color: rgb(243, 164, 18);
 }
