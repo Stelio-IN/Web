@@ -1,0 +1,32 @@
+form:get - os valores passados no formulario vao para a queryString var
+form:post - cria um formdata para passar dados
+
+<?php
+$frutas = array("Maçã", "Banana", "Morango");
+
+// Acessando elementos por índice
+echo $frutas[0]; // Saída: Maçã
+echo $frutas[1]; // Saída: Banana
+echo $frutas[2]; // Saída: Morango
+?>
+=============================================================================================
+Array Associativo:
+Um array associativo utiliza chaves personalizadas para acessar os elementos.
+<?php
+$aluno = array("nome" => "João", "idade" => 25, "nota" => 9.5);
+
+// Acessando elementos por chave
+echo $aluno["nome"];  // Saída: João
+echo $aluno["idade"]; // Saída: 25
+echo $aluno["nota"];  // Saída: 9.5
+?>
+===============================================================================================
+<?php
+$frutas = array("Maçã", "Banana", "Morango");
+
+// Usando foreach para percorrer o array
+foreach ($frutas as $fruta) {
+    echo $fruta . " ";
+}
+// Saída: Maçã Banana Morango
+?>

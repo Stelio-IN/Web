@@ -1,56 +1,53 @@
-<?php include 'html_header.php'?>
-<?php include 'cabecalho.php'?>
+<?php 
+    include 'layout/html_header.php';
+    include 'layout/nav.php';
+    
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/img/1.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
 
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/img/2.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
+    /* rotas - roteamento */
+   //Pegando o valor retornado da query String
+   $pagina = 'inicio';
+   //verificar se existe 
+    if(isset($_GET['p'])){
+        $pagina = $_GET['p'];
+    }
+ //   /* ver o condeudo retornado*/
+ //   if(empty($_POST)==false){
+ //       print_r($_POST);
+ //   }
 
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/img/3.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-primary">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
+    switch($pagina){
+        case 'inicio':
+            include'inicio.php';
+            break;
+        case 'empresa':
+             include'empresa.php';
+             break;
+        case 'servicos':
+            include'servicos.php';
+            break;
+        case 'contactos':
+            include'contactos.php';
+            break;
+        default:
+            include'error_page.php';
+            break;
+    }
 
-        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore quibusdam explicabo sequi voluptatem sunt ipsum expedita libero nihil perspiciatis, tempora commodi ipsa ullam officia dolor cum quam, esse corrupti.</span><span>Quasi debitis dolorem ducimus suscipit, totam eum cumque quidem sed, impedit, quia modi quo asperiores nostrum. Exercitationem et quis quisquam unde, perspiciatis temporibus rerum doloribus consequatur quidem, rem sunt quia?</span><span>Cumque minima atque dolore assumenda, inventore fugit voluptate beatae ipsum laborum rerum ad, quasi, exercitationem a. Repudiandae modi reprehenderit ratione, quos esse aliquam. Ab magni incidunt sit et amet quisquam.</span><span>Illo quisquam fuga suscipit et fugit reprehenderit atque, illum quasi, vel debitis facere dicta pariatur molestias quia qui? Cupiditate reprehenderit possimus vero sit quisquam dignissimos facere molestiae nihil ab perspiciatis!</span><span>Laboriosam quas aliquid aut minima quisquam veritatis eum blanditiis in sit, debitis facere dicta fugiat! Accusamus sit quo aperiam ipsa cupiditate sint esse dolorem, cumque, adipisci, aliquam similique iste dolor.</span></p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+   // if($pagina =="inicio"){
+   //     include'inicio.php';
+   // }elseif($pagina=="empresa"){
+   //     include'empresa.php';
+   // }elseif($pagina=="servicos"){
+   //     include'servicos.php';
+   // }elseif($pagina=="contactos"){
+   //     include'contactos.php';
+   // }else{
+   //    include'error_page.php';
+   // }
 
-<?php include 'footer.php' ?>
-<?php include 'html_footer.php'?>
+
+    include 'layout/footer.php';
+    include 'layout/html_footer.php';
+
+?>
