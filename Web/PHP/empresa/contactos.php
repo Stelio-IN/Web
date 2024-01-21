@@ -1,93 +1,144 @@
 
  <?php 
- /*
+        $erro_banco = '';
+        $sucesso_banco = '';
+
     //Validacao de formulario
     if($_SERVER['REQUEST_METHOD']=='POST'){
-    
-        //verificar se existem todos campos
 
-        $erro = '';
-        if(!isset($_POST['text_email']) || !isset($_POST['text_subject']) || !isset($_POST['text_mensagem'])){
-            $erro = 'Pelo menos um dos campos nao existe';
-        }
-        
-          $email = $_POST['text_email'];
-          $subject = $_POST['text_subject'];
-          $mensagem = $_POST['text_mensagem'];
-       //se nao tiver nenhum erro vai tentar validar o email e continuar para o processo seguinte 
-        if(empty($erro)){
-            //verificar se email e valido
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $erro = "Invalid email format";
+        //validacao formulario
+        if($_POST['formulario']=='email'){
+                //verificar se existem todos campos
+            $erro = '';
+            if(!isset($_POST['text_email']) || !isset($_POST['text_subject']) || !isset($_POST['text_mensagem'])){
+                $erro = 'Pelo menos um dos campos nao existe';
             }
-        }
+            $email = $_POST['text_email'];
+            $subject = $_POST['text_subject'];
+            $mensagem = $_POST['text_mensagem'];
+            //se nao tiver nenhum erro vai tentar validar o email e continuar para o processo seguinte 
+            if(empty($erro)){
+                //verificar se email e valido
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $erro = "Invalid email format";
+                }
+            }
+            //Tentativa de enviar email
+            if(empty($erro)){      
+                include 'enviar_email.php'; 
+            }
 
-        if(empty($erro)){
-         $resultado =   mail($email,$subject,$mensagem);
-            if($resultado){
-                echo 'sucesso';
+        }
+        //formulario banco de dados
+        if($_POST['formulario']=='newsletter'){
+            $email = $_POST['text_email'];
+            $nome = $_POST['text_nome'];
+            
+
+
+            include 'gestor.php';
+            $obj = new Gestor();
+
+            $parametros = array(
+               ':email' => $email,
+               ':nome' => $nome
+            );
+
+            //verificar se o email ja existe no banco de dados
+             $parametro_busca = array(
+               ':email' => $email
+            );
+            $busca = $obj->EXE_QUERY(
+                'SELECT email FROM emails WHERE email = :email',$parametro_busca
+            );
+            if(count($busca)!=0){
+                //email ja existe, se o email ja existir
+                $erro_banco = 'Email ja registrado <br> Use outra conta';
             }else{
-                echo 'erro';
-            }
-        }
-    }
-*/
-?>
-
-<?php
-    // Validacao de formulario
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
-        // Verificar se existem todos campos
-        $erro = '';
-        if (!isset($_POST['text_email']) || !isset($_POST['text_subject']) || !isset($_POST['text_mensagem'])) {
-            $erro = 'Pelo menos um dos campos nao existe';
-        }
-        
-        $email = isset($_POST['text_email']) ? htmlspecialchars($_POST['text_email']) : '';
-        $subject = isset($_POST['text_subject']) ? htmlspecialchars($_POST['text_subject']) : '';
-        $mensagem = isset($_POST['text_mensagem']) ? htmlspecialchars($_POST['text_mensagem']) : '';
-
-        // Se não tiver nenhum erro vai tentar validar o email e continuar para o processo seguinte 
-        if (empty($erro)) {
-            // Verificar se o e-mail é válido
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $erro = "Invalid email format";
-            }
-        }
-
-        if (empty($erro)) {
-            // Configurar cabeçalhos adicionais, se necessário
-            $additional_headers = [
-                'From' => 'hoteltransilvania@gmail.com', // Substitua com o endereço de e-mail desejado
-                'Reply-To' => $email,
-                'X-Mailer' => 'PHP/' . phpversion()
-            ];
-
-            // Parâmetros adicionais, se necessário
-            $additional_params = "";
-
-            // Enviar e-mail
-            $resultado = mail($email, $subject, $mensagem, $additional_headers, $additional_params);
-
-            if ($resultado) {
-                echo 'sucesso';
-            } else {
-                echo 'erro';
-            }
-        }
+                //adicionar novo obj
+                $obj-> EXE_NON_QUERY(
+                    'INSERT INTO emails(email,nome) VALUES(:email,:nome)', $parametros
+                );
+                $sucesso_banco ='obrigado por ter registrado o seu email!';
+             }
+        } 
     }
 ?>
 
+<div class="container m-3">
+    <div class="row">
+        <div class="offset-3 col-6 text-center">
+            <?php if (!empty($erro_banco)): ?>
+                <div class="alert alert-danger">
+                    <?php echo $erro_banco; ?>
+                </div>
+            <?php endif; ?>
 
-<h1>Contactos</h1>
-<!-- <form action="tratar.php" method="post" name="meu_form"  onsubmit="return validar()">   -->
-<form action="?p=contactos" method="post">
-  <input type="email" name="text_email"  placeholder="Email" required> <br>
-  <input type="text" name="text_subject" placeholder="Assunto" required><br>
-  <textarea name="text_mensagem"  cols="40" rows="3" required></textarea> <br>
-  <input type="submit" value="Enviar Mensagem">
-</form> 
+            <?php if (!empty($sucesso_banco)): ?>
+                <div class="alert alert-success">
+                    <?php echo $sucesso_banco; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mb-5">
+    <div class="row m3">
+        <div class="offset-3 col-6">
+        <h1>Contactos</h1>
+            <!-- <form action="tratar.php" method="post" name="meu_form"  onsubmit="return validar()">   -->
+            <form action="?p=contactos" method="post">
+
+                <input type="hidden" name="formulario" value="email">
+
+                <div class="form-group">
+                     <input type="email" name="text_email"  placeholder="Email" required class="form-control mb-3"> 
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="text_subject" placeholder="Assunto" required  class="form-control mb-3">
+                </div>
+
+                <div class="form-group">
+                    <textarea name="text_mensagem"  cols="40" rows="3" required  class="form-control mb-3"></textarea>
+                </div>
+
+                <div class="text-center">
+                     <input type="submit" value="Enviar Mensagem" class="btn btn-primary">
+                </div>
+                
+            </form> 
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-5">
+        <div class="offset-3 col-6">
+            <hr>
+        <h1>Banco de dados</h1>
+            <form action="?p=contactos" method="post">
+            
+                <input type="hidden" name="formulario" value="newsletter">
+
+                <div class="form-group">    
+                    <input type="text" name="text_nome"  placeholder="nome" required class="form-control mb-3"> 
+                </div>
+
+                <div class="form-group">    
+                    <input type="email" name="text_email"  placeholder="Email" required class="form-control mb-3"> 
+                </div>
+                
+                <div class="text-center">
+                    <input type="submit" value="Enviar banco de dados" class="btn btn-primary mb-5">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- esse codigo so sera executado se a codicao for satisfeita-->
 <?php if(!empty($erro)):?>

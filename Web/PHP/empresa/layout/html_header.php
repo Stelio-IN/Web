@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animate.compat.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
     
 </head>
 <body>

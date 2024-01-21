@@ -41,3 +41,10 @@ validacao
 *verficar se os campos existem 
 *verificar se todos campos estao preenchidos
 *validar de acordo com o tipo de campo
+
+
+instalancao do pacote de envio de email
+pelo composer
+-composer require phpmailer/phpmailer
+rodar o camando acima no terminar do seu cod
+link- https://github.com/PHPMailer/PHPMailer
