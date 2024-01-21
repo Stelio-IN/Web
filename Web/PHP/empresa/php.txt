@@ -30,3 +30,14 @@ foreach ($frutas as $fruta) {
 }
 // Saída: Maçã Banana Morango
 ?>
+
+===========================
+validacao
+-html, pode ser burlada vendo o codigo font e alternando 
+-js, pode ser burlada basta desativar o js no browser
+-php, no servidor mais importantes  
+
+
+*verficar se os campos existem 
+*verificar se todos campos estao preenchidos
+*validar de acordo com o tipo de campo
